@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "centaurus-adapters"
+version = "0.1.0"
+description = "Cross-business adapter framework — pluggable external service connectors with env-flag gating, dry-run, structured logging."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Centaurus Inc.", email = "centaurus.corp.ai@gmail.com" }
+]
+keywords = ["adapter", "integration", "fastapi", "wordpress", "ga4", "lms", "ai", "rag"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+ga4 = ["google-analytics-data>=0.18"]
+test = ["pytest>=7.4", "pytest-cov>=4.1"]
+
+[project.urls]
+Homepage = "https://github.com/centaurus-inc/centaurus-adapters"
+Documentation = "https://github.com/centaurus-inc/centaurus-adapters#readme"
+Issues = "https://github.com/centaurus-inc/centaurus-adapters/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/centaurus_adapters"]

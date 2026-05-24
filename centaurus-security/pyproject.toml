@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "centaurus-security"
+version = "0.1.0"
+description = "FastAPI/Starlette security utilities — input sanitization, PII masking, token-bucket rate limiting, security headers."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Centaurus Inc.", email = "centaurus.corp.ai@gmail.com" }]
+keywords = ["security", "fastapi", "starlette", "pii", "rate-limit", "csp", "sanitize"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Framework :: FastAPI",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+
+[project.urls]
+Homepage = "https://github.com/centaurus-inc/centaurus-security"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/centaurus_security"]
