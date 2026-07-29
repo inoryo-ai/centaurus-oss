@@ -18,6 +18,10 @@ These three libraries co-evolved across several internal AI products and share t
 
 Source published for review. PyPI release pending.
 
+Note: This public mirror was exported after stripping internal references,
+so the commit history is squashed. Each package keeps its own tests and
+changelog, which carry the actual evolution.
+
 ## License
 
 MIT — see each package's `LICENSE`.
